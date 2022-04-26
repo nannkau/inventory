@@ -17,6 +17,7 @@ public class Product {
     private Integer price;
     private Integer stock;
     private String color;
-    @OneToMany(mappedBy = "product",cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+    @OneToMany(cascade = CascadeType.ALL)
+    @JoinColumn(name = "product_id")
     private List<Tag> tags;
 }

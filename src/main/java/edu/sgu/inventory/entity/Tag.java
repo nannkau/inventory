@@ -12,8 +12,8 @@ public class Tag {
   @Id
   @Column(name = "tag_id")
   private  String tagId;
-  @JoinColumn(referencedColumnName = "product_id",name = "product_id")
-  @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
+  @JoinColumn(referencedColumnName = "product_id",name = "product_id",insertable = true, updatable = true)
+  @ManyToOne()
   @JsonIgnore
   private  Product product;
   private  Integer count;
