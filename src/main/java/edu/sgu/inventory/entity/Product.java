@@ -17,6 +17,6 @@ public class Product {
     private Integer price;
     private Integer stock;
     private String color;
-    @OneToMany(mappedBy = "product")
+    @OneToMany(mappedBy = "product",cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     private List<Tag> tags;
 }

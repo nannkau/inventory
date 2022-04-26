@@ -21,8 +21,7 @@ public class ReportController {
         List<Report> reports = products.stream().map(product -> {
             Report report = new Report();
             report.setProductId(product.getProductId());
-//            report.setRealValue(product.getTags().stream().filter(tag -> tag.getCount() > 0).collect(Collectors.toList()).size());
-            report.setRealValue(4);
+            report.setRealValue(product.getTags().stream().filter(tag -> tag.getCount() > 0).collect(Collectors.toList()).size());
             report.setStock(product.getStock());
             return report;
         }).collect(Collectors.toList());

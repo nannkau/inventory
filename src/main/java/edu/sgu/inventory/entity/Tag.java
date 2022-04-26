@@ -13,7 +13,7 @@ public class Tag {
   @Column(name = "tag_id")
   private  String tagId;
   @JoinColumn(referencedColumnName = "product_id",name = "product_id")
-  @ManyToOne()
+  @ManyToOne(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
   @JsonIgnore
   private  Product product;
   private  Integer count;
