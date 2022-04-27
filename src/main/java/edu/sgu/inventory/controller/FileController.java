@@ -35,7 +35,7 @@ public class FileController {
     @RequestMapping(value = "/import",method = RequestMethod.POST)
     public String upload(@RequestParam("productFile") MultipartFile productFile) {
         List<ProductImport> productImports= FileExcelUtil.readProductFromFile(productFile);
-       List<Product> products= productImports.stream().map(p->{
+        productImports.stream().forEach(p->{
             Product product= productRepository.findById(p.getProductId()).orElseGet(() -> null);
             if(product==null){
                 product = new Product();
@@ -58,9 +58,8 @@ public class FileController {
                 product.getTags().add(tag);
             }
 
-            return product;
-        }).collect(Collectors.toList());
-        productRepository.saveAll(products);
+           productRepository.save(product);
+        });
         return "redirect:/";
     }
 }
