@@ -18,4 +18,5 @@ public class Tag {
   private  Product product;
   private  Integer count;
   private String rssi;
+  private String color;
 }

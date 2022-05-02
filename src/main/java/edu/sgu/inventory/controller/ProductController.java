@@ -29,6 +29,7 @@ public class ProductController {
             Tag tag = tagRepository.findById(t.getTagId()).get();
             tag.setCount(t.getCount());
             tag.setRssi(t.getRssi());
+            tag.setColor(t.getColor());
             return tag;
         }).collect(Collectors.toList());
 
@@ -43,7 +44,6 @@ public class ProductController {
         List<ProductDto> result= products.stream().map(p->{
             ProductDto dto= new ProductDto();
             dto.setProductId(p.getProductId());
-            dto.setColor(p.getColor());
             dto.setName(p.getName());
             dto.setStock(p.getStock());
             dto.setTags(p.getTags());

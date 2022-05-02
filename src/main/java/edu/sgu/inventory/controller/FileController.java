@@ -41,7 +41,6 @@ public class FileController {
                 product = new Product();
                 product.setProductId(p.getProductId());
                 product.setName(p.getName());
-                product.setColor(p.getColor());
                 product.setStock(p.getStock());
                 product.setPrice(p.getPrice());
             }
@@ -51,6 +50,7 @@ public class FileController {
                 tag.setTagId(p.getTagId());
                 tag.setRssi("none");
                 tag.setCount(0);
+                tag.setColor(p.getColor());
             }
             if (product.getTags()==null){
                product.setTags(Arrays.asList(tag));

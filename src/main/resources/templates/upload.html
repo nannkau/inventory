@@ -13,23 +13,25 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div class="container">
+<div class="container" style="width: 600px; font-size: 30px">
     <div class="row">
 
-        <div class="col-6">
+        <div class="col-6" style="border: 3px solid plum; margin-top: 50px; ">
             <form method="POST" enctype="multipart/form-data" action="/import">
-                <div class="col-4">
-                    <p>select product file</p>
+                <div class="col-4" style="margin: 50px 0px 10px 50px">
+                    <p>Select product file</p>
                 </div>
-                <div class="col-2">
+                <div class="col-2" style="margin: 0px 0px 10px 50px">
                     <div class="form-group">
-                        <div class="custom-file">
+                        <div class="custom-file" >
                             <input type="file" class="custom-file-input" id="productFile" name="productFile">
-                            <label class="custom-file-label" for="productFile">Choose file</label>
+                            <label class="custom-file-label" for="productFile" style="margin-top:20px">Choose file</label>
                         </div>
                     </div>
                 </div>
-                <button class="btn btn-primary" type="submit">Import File</button>
+                <button class="btn btn-primary" type="submit" style="margin: 0px 0px 50px 50px; background-color: plum; border-color: plum; font-size: 30px">
+                    Import File
+                </button>
             </form>
 
         </div>

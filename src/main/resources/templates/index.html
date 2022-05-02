@@ -19,7 +19,7 @@
 </head>
 <body>
 
-<table id="example" class="display nowrap" style="width:100%">
+<table id="example" class="display nowrap" style="width:100%; font-size: 20px">
     <thead>
     <tr>
         <th>Item Code</th>
@@ -41,7 +41,9 @@
     </tbody>
 
 </table>
-<a class="btn btn-primary" th:href="@{/import}" role="button">Import data product now</a>
+<a class="btn btn-primary" th:href="@{/import}" role="button" style="font-size: 20px;background-color: plum;">
+    Import data product now
+</a>
     <script>
         $(document).ready(function() {
             var today = new Date();

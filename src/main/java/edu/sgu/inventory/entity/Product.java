@@ -16,7 +16,7 @@ public class Product {
     private String name;
     private Integer price;
     private Integer stock;
-    private String color;
+
     @OneToMany(cascade = CascadeType.ALL)
     @JoinColumn(name = "product_id")
     private List<Tag> tags;
