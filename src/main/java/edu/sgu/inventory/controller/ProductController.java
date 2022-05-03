@@ -29,7 +29,6 @@ public class ProductController {
             Tag tag = tagRepository.findById(t.getTagId()).get();
             tag.setCount(t.getCount());
             tag.setRssi(t.getRssi());
-            tag.setColor(t.getColor());
             return tag;
         }).collect(Collectors.toList());
 

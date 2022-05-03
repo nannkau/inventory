@@ -14,6 +14,5 @@ public class ProductDto {
     private String name;
     private Integer price;
     private Integer stock;
-//    private String color;
     private List<Tag> tags;
 }
